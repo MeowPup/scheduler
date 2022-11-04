@@ -21,3 +21,18 @@ export function getInterview(state, interview) {
   };
   return newObj;
 }
+
+export function getInterviewersForDay(state, day) {
+  const filteredDays = state.days.filter(days => days.name === day);
+  
+  if(state.days.length === 0 || filteredDays.length === 0 ) {
+    return [];
+  }
+
+  let interviewersList = [];
+
+  for (let interviewer of Object.values(state.interviewers)) {
+    interviewersList.push(state.interviewers[interviewer.id])
+  }
+  return interviewersList;
+};
