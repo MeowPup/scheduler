@@ -33,6 +33,7 @@ export function getInterviewersForDay(state, day) {
 
   for (let interviewer of Object.values(state.interviewers)) {
     interviewersList.push(state.interviewers[interviewer.id])
+    console.log(interviewersList)
   }
   return interviewersList;
 };

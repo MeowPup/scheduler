@@ -19,8 +19,6 @@ export default function Application(props) {
   
   const setDay = day => setState({ ...state, day });
 
-  const setDays = days => setState(prev => ({ ...prev, days }));
-
   const dailyAppointments = getAppointmentsForDay(state, state.day)
   
   const interviewersArray = getInterviewersForDay(state, state.day)
@@ -37,6 +35,18 @@ export default function Application(props) {
       /> 
     );
   });
+
+  // change local state when booking interview
+  // function bookInterview(id, interview) {
+  //   console.log(id, interview);
+  // }
+
+  // function save(name, interviewer) {
+  //   const interview = {
+  //     student: name,
+  //     interviewer
+  //   };
+  // }
 
   useEffect(() => {
     Promise.all([
@@ -72,12 +82,8 @@ export default function Application(props) {
 />
       </section>
       <section className="schedule">
-        {dailyAppointments.map(appointment => 
-          <Appointment 
-          key={appointment.id} 
-          interviewer={interviewersArray}
-          {...appointment} />
-          )}
+        {schedule}
+          <Appointment key="last" time="5pm" />
       </section>
     </main>
   );
