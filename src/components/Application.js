@@ -80,6 +80,7 @@ export default function Application(props) {
       interview={interview}
       interviewers={interviewersArray}
       bookInterview={bookInterview}
+      cancelInterview={cancelInterview}
       /> 
       );
     });
