@@ -23,17 +23,20 @@ export function getInterview(state, interview) {
 }
 
 export function getInterviewersForDay(state, day) {
-  const filteredDays = state.days.filter(days => days.name === day);
-  
-  if(state.days.length === 0 || filteredDays.length === 0 ) {
-    return [];
-  }
+let interviewerList = []; 
 
-  let interviewersList = [];
-
-  for (let interviewer of Object.values(state.interviewers)) {
-    interviewersList.push(state.interviewers[interviewer.id])
-    console.log(interviewersList)
+for (const interviewerDay of state.days) {
+  if (interviewerDay.name === day) {
+    interviewerList = interviewerDay.interviewers;
   }
-  return interviewersList;
+};
+
+let finalInterviewerList = interviewerList.map((id) => {
+  for (let interviewer in state.interviewers) {
+    if (Number(interviewer) === id) {
+      return state.interviewers[interviewer];
+    }
+  }
+})
+return finalInterviewerList
 };
