@@ -71,7 +71,6 @@ test("getAppointmentsForDay returns an empty array when the day is not found", (
   expect(result.length).toEqual(0);
 });
 
-
 // GET INTERVIEWERS TEST
 test("getInterviewersForDay returns an array", () => {
   const result = getInterviewersForDay(state, "Monday");
