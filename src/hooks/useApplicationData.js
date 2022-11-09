@@ -48,7 +48,7 @@ export default function useApplicationData(initial) {
     function cancelInterview(id, interview) {
       const appointment = {
         ...state.appointments[id],
-        interview: { ...interview }
+        interview: null
       };
       
       const appointments = {
