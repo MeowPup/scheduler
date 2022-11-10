@@ -3,7 +3,7 @@
 ## About
  Using the latest tools and techniques, we build and test a React application that allows users to book and cancel interviews. We combine a concise API with a WebSocket server to build a realtime experience.
 
- ## Features 
+ ## Preview
 
  !["Interviews can be booked between Monday and Friday"](https://github.com/MeowPup/scheduler/blob/master/docs/scheduler-homepage.png?raw=true)
 
@@ -13,7 +13,11 @@
 
  !["A user can edit the details of an existing interview"](https://github.com/MeowPup/scheduler/blob/master/docs/Edit-interview.png?raw=true)
 
- ## Other notable features
+ ## Features
+ - Interviews can be booked between Monday and Friday
+ - A user can book an interview in an empty appointment slot
+ - A user can cancel an existing interview
+ - A user can edit the details of an existing interview
  - The list of days informs the user how many slots are available for each day.
  - The expected day updates the number of spots available when an interview is booked or canceled.
  - A user is shown an error if an interview cannot be saved or deleted.
