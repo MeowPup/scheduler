@@ -3,7 +3,7 @@ import "./DayListItem.scss";
 import classNames from "classnames";
 
 export default function DayListItem(props) {
-
+  // adds or removes spots when appointments are altered for that day
   const formatSpots = () => {
     if (props.spots === 0) return "no spots remaining";
     if (props.spots === 1) return "1 spot remaining";
